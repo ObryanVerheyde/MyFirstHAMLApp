@@ -1,0 +1,2 @@
+class PopAppel < ApplicationRecord
+end

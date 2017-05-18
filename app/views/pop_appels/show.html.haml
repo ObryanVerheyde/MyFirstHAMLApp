@@ -1,0 +1,15 @@
+%p#notice= notice
+
+%p
+  %b Lastname:
+  = @pop_appel.lastname
+%p
+  %b Firstname:
+  = @pop_appel.firstname
+%p
+  %b Presence:
+  = @pop_appel.presence
+
+= link_to 'Edit', edit_pop_appel_path(@pop_appel)
+\|
+= link_to 'Back', pop_appels_path

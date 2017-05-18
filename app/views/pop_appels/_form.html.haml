@@ -1,0 +1,19 @@
+= form_for @pop_appel do |f|
+  - if @pop_appel.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@pop_appel.errors.count, "error")} prohibited this pop_appel from being saved:"
+      %ul
+        - @pop_appel.errors.full_messages.each do |msg|
+          %li= msg
+
+  .field
+    = f.label :lastname
+    = f.text_field :lastname
+  .field
+    = f.label :firstname
+    = f.text_field :firstname
+  .field
+    = f.label :presence
+    = f.check_box :presence
+  .actions
+    = f.submit 'Save'

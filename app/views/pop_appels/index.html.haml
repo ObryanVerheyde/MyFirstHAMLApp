@@ -1,0 +1,25 @@
+%h1 Listing pop_appels
+
+%table
+  %thead
+    %tr
+      %th Lastname
+      %th Firstname
+      %th Presence
+      %th
+      %th
+      %th
+
+  %tbody
+    - @pop_appels.each do |pop_appel|
+      %tr
+        %td= pop_appel.lastname
+        %td= pop_appel.firstname
+        %td= pop_appel.presence
+        %td= link_to 'Show', pop_appel
+        %td= link_to 'Edit', edit_pop_appel_path(pop_appel)
+        %td= link_to 'Destroy', pop_appel, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Pop appel', new_pop_appel_path
